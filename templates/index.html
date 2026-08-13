@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Pizza CaprichoSa: pizza artesanal, ingredientes frescos e reservas online em Piracicaba." />
+    <title>Pizza CaprichoSa | Pizza artesanal em Piracicaba</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}" />
+</head>
+
+<body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
+    <header class="site-header">
+        <a href="/" class="brand" aria-label="Pizza CaprichoSa, página inicial">
+            <span class="brand-mark">
+                <img src="{{ url_for('static', filename='logo.jpeg') }}" alt="Logo Pizza CaprichoSa" />
+            </span>
+            <span>Pizza <strong>CaprichoSa</strong></span>
+        </a>
+        <nav aria-label="Navegação principal">
+            <a href="#cardapio">Cardápio</a>
+            <a href="#sobre">Nossa massa</a>
+            <a class="nav-cta" href="#reservas"><span class="nav-cta-label-full">Reservar mesa</span><span
+                    class="nav-cta-label-short">Reservar</span></a>
+        </nav>
+    </header>
+
+    <main id="conteudo">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <p class="eyebrow">Forno aceso. Mesa posta.</p>
+                <h1 id="hero-title">A sua noite merece uma pizza <em>caprichada.</em></h1>
+                <p class="hero-text">Massa de fermentação lenta, ingredientes que chegam frescos e o toque quente do
+                    nosso forno.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#reservas">Reserve a sua mesa <span
+                            aria-hidden="true">→</span></a>
+                    <a class="text-link" href="#cardapio">Ver sabores <span aria-hidden="true">↓</span></a>
+                </div>
+                <div class="hero-note"><span aria-hidden="true">●</span> Atendimento para reservas entre <strong>16h e
+                        20h</strong></div>
+            </div>
+            <div class="hero-visual" aria-label="Pizza artesanal recém-saída do forno">
+                <div class="hero-glow"></div>
+                <img id="heroPizza" data-supabase-image="heroPizza" src="{{ images.get('heroPizza', '') }}"
+                    alt="Pizza artesanal dourada com manjericão fresco" />
+                <span class="stamp">feito<br />com fogo<br />&amp; afeto</span>
+                <div class="hero-cue"><span>desde a massa<br />até a última fatia</span><i></i></div>
+            </div>
+        </section>
+
+        <section class="intro-band" aria-label="Destaques da pizzaria">
+            <div><b>100%</b><span>massa artesanal</span></div>
+            <div><b>Fogo</b><span>sabor de verdade</span></div>
+            <div><b>+ frescor</b><span>ingredientes selecionados</span></div>
+        </section>
+
+        <section id="cardapio" class="menu-section section-shell" aria-labelledby="menu-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Cardápio da casa</p>
+                    <h2 id="menu-title">Escolha o seu <em>capricho.</em></h2>
+                </div>
+                <p>Receitas autorais sobre uma massa leve, crocante por fora e macia no centro.</p>
+            </div>
+            <div class="menu-grid">
+                <article class="pizza-card card-featured">
+                    <div class="pizza-image"><img id="pizzaMargherita" data-supabase-image="pizzaMargherita"
+                            src="{{ images.get('pizzaMargherita', '') }}"
+                            alt="Pizza Margherita artesanal com tomate e manjericão" /><span>Favorita da casa</span>
+                    </div>
+                    <div class="pizza-content">
+                        <div class="pizza-title">
+                            <h3>Margherita Viva</h3><strong>R$ 58</strong>
+                        </div>
+                        <p>Molho de tomate, muçarela fresca, manjericão e azeite extravirgem.</p>
+                    </div>
+                </article>
+                <article class="pizza-card">
+                    <div class="pizza-image"><img id="pizzaCalabresa" data-supabase-image="pizzaCalabresa"
+                            src="{{ images.get('pizzaCalabresa', '') }}"
+                            alt="Pizza de calabresa artesanal com cebola roxa" /></div>
+                    <div class="pizza-content">
+                        <div class="pizza-title">
+                            <h3>Calabresa Brasa</h3><strong>R$ 62</strong>
+                        </div>
+                        <p>Calabresa artesanal, cebola roxa, azeitonas pretas e orégano fresco.</p>
+                    </div>
+                </article>
+                <article class="pizza-card">
+                    <div class="pizza-image"><img id="pizzaCaprese" data-supabase-image="pizzaCaprese"
+                            src="{{ images.get('pizzaCaprese', '') }}"
+                            alt="Pizza Caprese com burrata e tomate assado" /></div>
+                    <div class="pizza-content">
+                        <div class="pizza-title">
+                            <h3>Caprese de Forno</h3><strong>R$ 66</strong>
+                        </div>
+                        <p>Tomates assados, burrata, pesto de manjericão e raspas de limão.</p>
+                    </div>
+                </article>
+                <article class="pizza-card">
+                    <div class="pizza-image"><img id="pizzaCogumelos" data-supabase-image="pizzaCogumelos"
+                            src="{{ images.get('pizzaCogumelos', '') }}" alt="Pizza de cogumelos frescos e queijo" />
+                    </div>
+                    <div class="pizza-content">
+                        <div class="pizza-title">
+                            <h3>Bosque Trufado</h3><strong>R$ 68</strong>
+                        </div>
+                        <p>Mix de cogumelos, creme de parmesão, muçarela e azeite trufado.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="sobre" class="story-section">
+            <div class="story-image"><img id="storyIngredients" data-supabase-image="storyIngredients"
+                    src="{{ images.get('storyIngredients', '') }}"
+                    alt="Tomates, manjericão e farinha sobre uma mesa de madeira" /></div>
+            <div class="story-copy">
+                <p class="eyebrow">Do nosso forno para a sua mesa</p>
+                <h2>O bom leva tempo.<br /><em>O sabor, memória.</em></h2>
+                <p>Nossa cozinha respeita o tempo da massa e a origem dos ingredientes. É uma pizza de presença: para
+                    dividir, conversar e ficar mais um pouco.</p><a class="text-link dark-link" href="#reservas">Venha
+                    viver essa noite <span aria-hidden="true">→</span></a>
+            </div>
+        </section>
+
+        <section id="reservas" class="reservation-section" aria-labelledby="booking-title">
+            <div class="booking-copy">
+                <p class="eyebrow">Reserve a sua mesa</p>
+                <h2 id="booking-title">Seu lugar ao redor<br />do <em>forno.</em></h2>
+                <p>Conte para nós quando você vem. A confirmação da solicitação aparece imediatamente na tela.</p>
+                <div class="booking-address"><span aria-hidden="true">⌖</span>
+                    <p>Tv. Walter Fernando Altafin, 51 - Alto, Piracicaba - SP, 13416-257, Brasil</p>
+                </div>
+            </div>
+            <form id="reservationForm" class="reservation-form" novalidate>
+                <div class="form-heading">
+                    <h3>Faça sua reserva</h3>
+                    <p>Todos os campos são obrigatórios.</p>
+                </div>
+                <div id="reservationStatus" class="form-status" role="status" aria-live="polite" hidden></div>
+                <div class="form-field full"><label for="customerName">Nome completo</label><input id="customerName"
+                        name="name" type="text" autocomplete="name" minlength="3" maxlength="120"
+                        placeholder="Como podemos chamar você?" required /><small class="field-error"
+                        id="error-name"></small></div>
+                <div class="form-field full"><label for="phone">Telefone / WhatsApp</label><input id="phone"
+                        name="phone" type="tel" inputmode="numeric" autocomplete="tel" maxlength="16"
+                        placeholder="(19) 99999-9999" required /><small class="field-error" id="error-phone"></small>
+                </div>
+                <div class="form-field"><label for="partySize">Pessoas</label><select id="partySize" name="partySize"
+                        required>
+                        <option value="" selected>Selecione</option>
+                        <option value="1">1 pessoa</option>
+                        <option value="2">2 pessoas</option>
+                        <option value="3">3 pessoas</option>
+                        <option value="4">4 pessoas</option>
+                        <option value="5">5 pessoas</option>
+                        <option value="6">6 pessoas</option>
+                        <option value="7">7 pessoas</option>
+                        <option value="8">8 pessoas</option>
+                        <option value="9">9 pessoas</option>
+                        <option value="10">10 pessoas</option>
+                        <option value="11">11 pessoas</option>
+                        <option value="12">12 pessoas</option>
+                        <option value="13">13 pessoas</option>
+                        <option value="14">14 pessoas</option>
+                        <option value="15">15 pessoas</option>
+                        <option value="16">16 pessoas</option>
+                        <option value="17">17 pessoas</option>
+                        <option value="18">18 pessoas</option>
+                        <option value="19">19 pessoas</option>
+                        <option value="20">20 pessoas</option>
+                    </select><small class="field-error" id="error-partySize"></small></div>
+                <div class="form-field"><label for="bookingDate">Data</label><input id="bookingDate" name="date"
+                        type="date" required /><small class="field-error" id="error-date"></small></div>
+                <div class="form-field full"><label for="bookingTime">Horário</label><select id="bookingTime"
+                        name="time" required disabled>
+                        <option value="">Carregando horários...</option>
+                    </select><small class="field-error" id="error-time"></small></div>
+                <button class="button button-primary button-wide" type="submit">Registrar solicitação <span
+                        aria-hidden="true">→</span></button>
+                <p class="form-disclaimer">Ao enviar, você autoriza o uso dos seus dados exclusivamente para atender a
+                    esta reserva.</p>
+            </form>
+        </section>
+
+        <section id="adminView" class="admin-page" aria-labelledby="admin-title" hidden>
+            <div id="adminLogin" class="admin-login">
+                <p class="eyebrow">Área restrita</p>
+                <h1 id="admin-title">Painel da <em>casa.</em></h1>
+                <p>Acesse para consultar reservas e organizar a disponibilidade.</p>
+                <form id="loginForm" class="admin-login-form" novalidate>
+                    <div id="loginStatus" class="form-status" role="status" aria-live="polite" hidden></div>
+                    <label for="adminUsername">Usuário</label><input id="adminUsername" autocomplete="username"
+                        maxlength="80" required />
+                    <label for="adminPassword">Senha</label><input id="adminPassword" type="password"
+                        autocomplete="current-password" maxlength="160" required />
+                    <button class="button button-primary" type="submit">Entrar no painel</button>
+                </form>
+            </div>
+            <div id="adminDashboard" class="admin-dashboard" hidden>
+                <div class="admin-top">
+                    <div>
+                        <p class="eyebrow">Gestão de reservas</p>
+                        <h1>Boa noite, <em>pizzaiolo.</em></h1>
+                    </div><button id="logoutButton" class="button button-outline" type="button">Sair</button>
+                </div>
+                <div class="admin-grid">
+                    <section class="admin-card reservations-card">
+                        <div class="admin-card-head">
+                            <h2>Próximas reservas</h2><button id="refreshReservations" class="icon-button" type="button"
+                                aria-label="Atualizar lista">↻</button>
+                        </div>
+                        <div class="table-wrap">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Cliente</th>
+                                        <th>Data</th>
+                                        <th>Horário</th>
+                                        <th>Pessoas</th>
+                                        <th>Telefone</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="reservationsTable">
+                                    <tr>
+                                        <td colspan="5">Carregando reservas...</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                    <section class="admin-card">
+                        <h2>Disponibilidade</h2>
+                        <form id="scheduleForm" class="stack-form"><label for="startTime">Início das
+                                reservas</label><input id="startTime" type="time" required /><label for="endTime">Último
+                                horário</label><input id="endTime" type="time" required /><label
+                                for="slotMinutes">Intervalo entre horários</label><select id="slotMinutes">
+                                <option value="15">15 minutos</option>
+                                <option value="30">30 minutos</option>
+                                <option value="60">60 minutos</option>
+                            </select><button class="button button-dark" type="submit">Salvar horários</button></form>
+                    </section>
+                    <section class="admin-card">
+                        <h2>Bloquear uma data</h2>
+                        <form id="blockDateForm" class="stack-form"><label for="blockedDate">Data
+                                indisponível</label><input id="blockedDate" type="date" required /><label
+                                for="blockReason">Motivo <span>(opcional)</span></label><input id="blockReason"
+                                maxlength="160" placeholder="Ex.: Manutenção" /><button class="button button-dark"
+                                type="submit">Bloquear data</button></form>
+                        <ul id="blockedDatesList" class="blocked-list"></ul>
+                    </section>
+                </div>
+                <div id="adminStatus" class="form-status" role="status" aria-live="polite" hidden></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-brand"><a href="/" class="brand"><span class="brand-mark">P</span><span>Pizza
+                    <strong>CaprichoSa</strong></span></a>
+            <p>Pizza artesanal para noites sem pressa.</p>
+        </div>
+        <address>Tv. Walter Fernando Altafin, 51 - Alto, Piracicaba - SP, 13416-257, Brasil</address>
+        <div class="footer-links"><a href="https://www.instagram.com/" target="_blank"
+                rel="noopener noreferrer">Instagram</a><a href="https://www.facebook.com/" target="_blank"
+                rel="noopener noreferrer">Facebook</a><a href="/admin">Área administrativa</a></div>
+        <p class="copyright">© <span id="currentYear"></span> Pizza CaprichoSa</p>
+    </footer>
+    <script src="{{ url_for('static', filename='js/index.js') }}" defer></script>
+</body>
+
+</html>
