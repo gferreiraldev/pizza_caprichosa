@@ -15,6 +15,7 @@ limits==5.8.0
 MarkupSafe==3.0.3
 ordered-set==4.1.0
 packaging==26.3
+python-dotenv==1.2.2
 requests==2.34.2
 SQLAlchemy==2.0.52
 typing_extensions==4.16.0
