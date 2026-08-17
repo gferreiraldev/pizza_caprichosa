@@ -6,18 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description"
         content="Pizza CaprichoSa: pizza artesanal, ingredientes frescos e reservas online em Piracicaba." />
-    <title>Pizza CaprichoSa | Pizza artesanal em Piracicaba</title>
+    <title>Pizzaria | Pizza artesanal</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}" />
 </head>
 
 <body>
     <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
     <header class="site-header">
-        <a href="/" class="brand" aria-label="Pizza CaprichoSa, página inicial">
+        <a href="/" class="brand" aria-label="Pizzaria, página inicial">
             <span class="brand-mark">
-                <img src="{{ url_for('static', filename='logo.jpeg') }}" alt="Logo Pizza CaprichoSa" />
+                <img src="{{ url_for('static', filename='') }}" alt="Logo Pizzaria" />
             </span>
-            <span>Pizza <strong>CaprichoSa</strong></span>
+            <span>Pizzaria</span>
         </a>
         <nav aria-label="Navegação principal">
             <a href="#cardapio">Cardápio</a>
@@ -133,7 +133,7 @@
                 <h2 id="booking-title">Seu lugar ao redor<br />do <em>forno.</em></h2>
                 <p>Conte para nós quando você vem. A confirmação da solicitação aparece imediatamente na tela.</p>
                 <div class="booking-address"><span aria-hidden="true">⌖</span>
-                    <p>Tv. Walter Fernando Altafin, 51 - Alto, Piracicaba - SP, 13416-257, Brasil</p>
+                    <p>Rua...</p>
                 </div>
             </div>
             <form id="reservationForm" class="reservation-form" novalidate>
@@ -260,15 +260,14 @@
     </main>
 
     <footer class="site-footer">
-        <div class="footer-brand"><a href="/" class="brand"><span class="brand-mark">P</span><span>Pizza
-                    <strong>CaprichoSa</strong></span></a>
+        <div class="footer-brand"><a href="/" class="brand"><span class="brand-mark">P</span><span>Pizza</span></a>
             <p>Pizza artesanal para noites sem pressa.</p>
         </div>
-        <address>Tv. Walter Fernando Altafin, 51 - Alto, Piracicaba - SP, 13416-257, Brasil</address>
+        <address>Rua...</address>
         <div class="footer-links"><a href="https://www.instagram.com/" target="_blank"
                 rel="noopener noreferrer">Instagram</a><a href="https://www.facebook.com/" target="_blank"
                 rel="noopener noreferrer">Facebook</a><a href="/admin">Área administrativa</a></div>
-        <p class="copyright">© <span id="currentYear"></span> Pizza CaprichoSa</p>
+        <p class="copyright">© <span id="currentYear"></span> Pizzaria </p>
     </footer>
     <script src="{{ url_for('static', filename='js/index.js') }}" defer></script>
 </body>
